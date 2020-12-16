@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReservationsList from '../ReservationsList/ReservationsList.js'
 import FormReservation from '../FormReservation/FormReservation.js'
 // import Reservation from '../Reservation/Reservation.js'
-import { getAllReservations } from '../apiCalls.js'
+import { getAllReservations, addNewReservation } from '../apiCalls.js'
 import './App.css';
 
 class App extends Component {
@@ -20,6 +20,7 @@ class App extends Component {
 
   makeReservation = (reservationInfo) => {
     this.setState({ reservations: [...this.state.reservations, reservationInfo]})
+    addNewReservation();
   }
 
   deleteReservation = (cardId) => {
