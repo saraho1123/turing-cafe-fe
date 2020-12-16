@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReservationsList from '../ReservationsList/ReservationsList.js'
 import FormReservation from '../FormReservation/FormReservation.js'
 // import Reservation from '../Reservation/Reservation.js'
-import { getAllReservations, addNewReservation } from '../apiCalls.js'
+import { getAllReservations, addNewReservation, deleteNewReservation } from '../apiCalls.js'
 import './App.css';
 
 class App extends Component {
@@ -24,6 +24,8 @@ class App extends Component {
   }
 
   deleteReservation = (cardId) => {
+    deleteNewReservation(cardId);
+    // I don't think I was able to get the delete working!
     const remainingReservations = this.state.reservations.filter(reservation => {
       return reservation.id !== cardId
     })
