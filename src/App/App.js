@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReservationsList from '../ReservationsList/ReservationsList.js'
-import Reservation from '../Reservation/Reservation.js'
+// import Reservation from '../Reservation/Reservation.js'
 import { getAllReservations } from '../apiCalls.js'
 import './App.css';
 
@@ -8,11 +8,14 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-
+      reservations: [],
     }
   }
 
-  
+  componentDidMount = () => {
+    getAllReservations()
+      .then(reservationData => this.setState({ reservations: reservationData}))
+  }
 
   render() {
     return (
@@ -23,10 +26,9 @@ class App extends Component {
   
           </div>
           <div className='resy-container'>
-            
+            <ReservationsList reservations={this.state.reservations}/>
           </div>
         </div>
-        <ReservationsList />
       </main>
     )
   }
