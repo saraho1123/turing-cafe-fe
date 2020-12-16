@@ -1,4 +1,4 @@
 export const getAllReservations = () =>  {
-  return fetch('')
-    .then(respons => Response.json())
+  return fetch('http://localhost:3001/api/v1/reservations')
+    .then(response => response.json())
 }
