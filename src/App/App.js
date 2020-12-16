@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReservationsList from '../ReservationsList/ReservationsList.js'
+import FormReservation from '../FormReservation/FormReservation.js'
 // import Reservation from '../Reservation/Reservation.js'
 import { getAllReservations } from '../apiCalls.js'
 import './App.css';
@@ -23,7 +24,7 @@ class App extends Component {
         <div className="App">
           <h1 className='app-title'>Turing Cafe Reservations</h1>
           <div className='resy-form'>
-  
+          <FormReservation/>
           </div>
           <div className='resy-container'>
             <ReservationsList reservations={this.state.reservations}/>
