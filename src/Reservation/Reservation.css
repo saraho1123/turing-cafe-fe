@@ -1,0 +1,17 @@
+.reservation-card {
+  background: white;
+  border: solid .5em teal;
+  border-radius: .6em;
+  width: 15vw;
+  margin: 1em;
+  padding: 0 0 1em 0;
+  color: teal;
+}
+
+.delete-button {
+  background: teal;
+  border: none;
+  border-radius: .3em;
+  width: 10em;
+  height: 2em;
+}
