@@ -6,7 +6,7 @@ import userEvent from '@testing-library/user-event';
 
 
 describe('Reservation', () => {
-  it('should display detail for a single reservation', () => {
+  it('should display details for a single reservation', () => {
     render(
       <Reservation 
         id='1'
@@ -26,7 +26,7 @@ describe('Reservation', () => {
   })
 
   //COME BACK TO THIS ONE!
-  
+
   // it('should remove a reservation when a user clicks the cancel button', () => {
   //   const mockCancelReservation = jest.fn();
   //   render(
