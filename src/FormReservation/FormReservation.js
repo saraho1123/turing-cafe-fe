@@ -26,8 +26,10 @@ class FormReservation extends Component {
       time: this.state.time,
       number: this.state.number,
     }
-    this.props.makeReservation(newReservation)
-    this.clearInputs();
+    if(newReservation.name !== '') {
+      this.props.makeReservation(newReservation)
+      this.clearInputs();
+    }
   }
 
   clearInputs = () => {
