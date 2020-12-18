@@ -24,7 +24,7 @@ class FormReservation extends Component {
       name: this.state.name,
       date: this.state.date,
       time: this.state.time,
-      number: this.state.number,
+      number: +this.state.number,
     }
     if(newReservation.name !== '') {
       this.props.makeReservation(newReservation)

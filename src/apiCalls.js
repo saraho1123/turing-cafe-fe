@@ -4,6 +4,7 @@ export const getAllReservations = () =>  {
 }
 
 export const addNewReservation = (reservationInfo) => {
+  // console.log(reservationInfo)
   return fetch('http://localhost:3001/api/v1/reservations', {
     method: 'POST',
     headers: {
@@ -15,7 +16,8 @@ export const addNewReservation = (reservationInfo) => {
 }
 
 export const deleteNewReservation = (id) => {
-  return fetch(`http://localhost:3001/api/v1/reservations/:${id}`, {
+  console.log(id)
+  return fetch(`http://localhost:3001/api/v1/reservations/${id}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json'

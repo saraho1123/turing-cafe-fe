@@ -20,7 +20,7 @@ class App extends Component {
 
   makeReservation = (reservationInfo) => {
     this.setState({ reservations: [...this.state.reservations, reservationInfo]})
-    addNewReservation();
+    addNewReservation(reservationInfo);
   }
 
   deleteReservation = (cardId) => {
